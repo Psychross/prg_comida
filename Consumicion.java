@@ -19,5 +19,5 @@ package Hosteleria.model;
  * @date 07-mar-2018
  */
 public class Consumicion {
-
+private String alimento;
 }
