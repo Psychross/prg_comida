@@ -6,9 +6,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Postre extends Consumicion {
-private Temperatura temperatura;
-private Gusto gusto;
-private String ingredientes;
+
+    private Temperatura temperatura;
+    private Gusto gusto;
+    private String ingredientes;
 
     public Postre(Temperatura temperatura, Gusto gusto, String ingredientes, double precio, String nombre) {
         super(precio, nombre);
@@ -40,18 +41,19 @@ private String ingredientes;
     public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
-    
-    public void ordenarAlimentos(){
+
+    public void ordenarAlimentos() {
         String ingre = this.ingredientes;
         String orden = "";
         Pattern pattern = Pattern.compile("\\w+");
         Matcher matcher = pattern.matcher(ingre);
         while (matcher.find()) {
-        //System.out.println(matcher.group());
-        orden = orden + matcher.group() + "\n";
-        this.ingredientes = orden;
-}
-        
-}
+            //System.out.println(matcher.group());
+            orden = orden + matcher.group() + "\n";
+            this.ingredientes = orden;
+        }
+
+    }
 
 }
+
